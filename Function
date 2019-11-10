@@ -1,0 +1,56 @@
+#Function main() is not define in this code
+#Check the next code for Main Function()
+#Codes
+def log(uname,code):
+    
+    file=open("password.rar","r+")
+    content=file.read()
+    file.close()
+    file=open('username.txt','r+')
+    content2=file.read()
+    file.close()
+    file=open("signup.txt","r+")
+    name=file.read()
+    file.close()
+
+    
+    if uname==content2 and code==content:
+        print('login successful:')
+        print("HELLO",name)
+    elif uname==content2 and code!=content:
+        print('Wrong Password or username:')
+        main()
+    elif uname!=content2:
+        print("This User Does not exist ! You Will Redirected to main Page:")
+        main()
+    else:
+        print ("Wrong Info")
+        main()
+
+
+
+def signup():
+    print('enter your Info!')
+    name=open("signup.txt","w+")
+    name.write(input('enter the name:\n'))
+    name.close()
+    name=open("signup.txt","a")
+    name.write("\n Your Date Of Birth is : \n")
+    name.close()
+    name=open("signup.txt","a")
+    name.write(input('\nEnter Your DOB in DD/MM/YYYY:\n'))
+    name.close()
+    uname=open("username.txt","w+")
+    uname.write(input('enter the user name: \n'))
+    uname.close()
+    password=open("password.rar","w+")
+    password.write(input('enter the password:\n'))
+    password.close()
+    
+    main()
+    def fpass():
+    
+    file=open("password.rar","w")
+    file.write(input("input new password"))
+    file.close()
+    main()
