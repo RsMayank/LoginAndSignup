@@ -1,0 +1,19 @@
+#This Function to call the main() and input to all the function previously craeted
+
+def main():
+    n=int(input('enter 1 for login ,2 for sign up and 3 for forgot password:\n'))
+    if n==1:
+        
+        log(input('Enter the username \n'),input('\nenter the password:\n'))
+    elif n==2:
+        signup()
+    elif n==3:
+        fpass()
+    else:
+        print('Invalid Input! Retry')
+        main()
+        
+        
+  
+if __name__=="__main__":
+    main()
